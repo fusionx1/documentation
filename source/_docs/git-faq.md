@@ -185,7 +185,7 @@ By default your remote will be named origin. If you have renamed your Pantheon s
 
 ### Why can't I connect to Git?
 
-If you're having problems cloning your Git repository, verify your SSH key in your User Dashboard is enabled. For more information, see [Generating SSH Keys](/docs/generate-ssh-key).
+If you're having problems cloning your Git repository, verify your SSH key in your User Dashboard is enabled. For more information, see [Generating SSH Keys](/docs/ssh-keys).
 
 ### Why am I being prompted for my password after adding the public key?
 
@@ -242,7 +242,7 @@ A simple option is to configure Git with a multi-remote origin within `.git/conf
 	url = git@github.com:systemseed/example.git
 ```
 
-Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/guides/contributors/mrfelton) for contributing this tip in the [Power Users](/docs/power-users) group.
+Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/contributors/mrfelton) for contributing this tip in the [Power Users](/docs/power-users) group.
 
 ### Why are some merged commits hidden?
 

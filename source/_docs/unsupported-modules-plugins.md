@@ -17,6 +17,9 @@ We do not prevent you from installing and using these plugins/modules; however, 
 ### Adaptive Image Styles
 **Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. See [Platform Considerations](/docs/platform-considerations/#nginx.conf) and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182).
 <hr>
+### AdvAgg 
+**Issue**: We do not recommend using AdvAgg as it can cause conflicts with Varnish caching leading to various errors, such as `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for css files are not getting through` or `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for js files are not getting through`.
+
 ### Aquia Solr Search
 **Issue**: If Acquia Solr modules are present in the site codebase (even if disabled) and Pantheon Apache Solr is enabled, the site will be unable to connect to Solr server.
 
@@ -27,9 +30,9 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 <hr>
 ### Backup & Migrate
-**Issue**: The Backup and Migrate module can create large archives and cause issues with the workflow tools on the dashboard. See [Backup Creation](/docs/create-backups#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
+**Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. See [Backup Creation](/docs/create-backups#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
 
-**Solution**: You can use the automated backups that are available on the dashboard for each environment.
+**Solution**: You can use the automated backups that are available on the Dashboard for each environment.
 <hr>
 ### Boost
 **Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust Varnish infrastructure that caches pages for anonymous visitors at the highest possible performance. See [Working with Varnish](/docs/varnish).
@@ -222,9 +225,11 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 <hr>
 
 ### Wordfence
-**Issue**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with Varnish.
+**Issue #1**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with Varnish.
 
 **Solution**: Disable Wordfence-generated cookies by disabling Live Traffic within the Wordfence options page. See the  [WordPress support forum](https://wordpress.org/support/topic/wfvt-cookie?replies=5) for details.
+
+**Issue** #2: The Wordfence firewall expects specific write access to `wp-content/wflogs` during activation. Adding a symlink does not mitigate this, so using the Wordfence firewall is not supported on the platform.
 <hr>
 
 ## Dynamic Outbound IPs

@@ -2,8 +2,7 @@
   "rules": {
     "default": 70,
     "criticalpath": 38,
-    "ydns": 9,
-    "yminify": 59,
+    "ydns": 5,
     "ycookiefree":19,
     "jsnumreq":51,
     "thirdpartyasyncjs": 15,

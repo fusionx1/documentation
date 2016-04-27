@@ -10,8 +10,8 @@ While Pantheon provides several options for on-server development, local develop
 ## Before You Begin
 Be sure you have:
 
-- A local stack capable of running Drupal or WordPress. [Kalabox](http://www.kalamuna.com/products/kalabox) integrates with the Pantheon platform. Tools such as [MAMP](http://www.mamp.info/), [WAMP](http://www.wampserver.com/),  [XAMPP](https://www.apachefriends.org/index.html), and  all work.
-    - Pantheon uses a [particular architecture to maximize performance and availability](/docs/application-containers/), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine. 
+- A local stack capable of running Drupal or WordPress. [Kalabox](http://www.kalamuna.com/products/kalabox) integrates with the Pantheon platform. Tools such as [MAMP](http://www.mamp.info/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
+    - Pantheon uses a [particular architecture to maximize performance and availability](/docs/application-containers/), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
 - Git client for tracking code changes
 - SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync
 - [Terminus](/docs/terminus/)
@@ -22,10 +22,6 @@ To save time, clear the target site environment's cache. This can be done from t
 ```bash
 terminus site clear-cache
 ```
-
-<div class="alert alert-info" role="alert">
-<h4>Note</h4>
-Replace <code>&lt;site&gt;</code> with your site name, and <code>&lt;env&gt;</code> with the environment (Dev, Test, or Live). You can see a list of all your sites by running <code>terminus sites list</code></div>
 
 There are three parts to any dynamic website:
 
@@ -46,7 +42,7 @@ Log in to Pantheon and load the Dashboard for the site you want to work on.
 ### Step 2: Copy the Git Clone Command
 
 At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:<br />
-![Copy Past Git Clone](/docs/assets/images/git_string.png)<br />
+![Copy Past Git Clone](/source/docs/assets/images/git-string.png)<br />
 
 ### Step 3: Run Git Clone
 
@@ -56,8 +52,8 @@ On your local environment, go to where you want the code to reside. Git will cre
 git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
 ```
 If everything worked correctly, you will see Git fetching the data:<br />
-![Git Clone During](/docs/assets/images/git_clone.png)<br />
-If you run into permission problems, check your [SSH key](/docs/add-ssh-key/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
+![Git Clone During](/source/docs/assets/images/git_clone.png)<br />
+If you run into permission problems, check your [SSH key](/docs/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
 
 ## Get the Database
 

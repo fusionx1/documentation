@@ -26,7 +26,7 @@ Log in to Pantheon and load the Dashboard for the site you want to work on.
 ### Step 2: Copy the Git Clone Command
 
 At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:<br />
-![Copy Past Git Clone](/docs/assets/images/git_string.png)<br />
+![Copy Past Git Clone](/docs/assets/images/git-string.png)<br />
 
 ### Step 3: Run Git Clone
 
@@ -37,7 +37,7 @@ git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository
 ```
 If everything worked correctly you will see Git fetching the data:<br />
 ![Git Clone During](/docs/assets/images/git_clone.png)<br />
-If you run into permission problems, check your [SSH key](/docs/add-ssh-key/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
+If you run into permission problems, check your [SSH key](/docs/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
 
 ## Make a Change
 
